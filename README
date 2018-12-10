@@ -1,0 +1,15 @@
+In this project, we program our own version of ps command in Linux system.
+
+We divide our project into three pieces: 
+
+"option_parser" is the entrance of our programm, which reads input from user 
+and record status for each arguments prepared for future printing.
+
+"get_user_proc" is called when user's input doesn't include a "-p" command.It 
+basically iterate every process in the /proc file and send each process to get_
+proc_info method to check if it's a match with UID and print user asked info.
+
+"get_proc_info" complete two things, one is to determine if the process passed by
+get_user_proc is a match with UID, if so, print out request info; the other is to 
+print user asked info for process mentioned in -p <pid> command.
+
